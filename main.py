@@ -1,19 +1,13 @@
 import streamlit as st
 
-def show_button():
-    st.button('hello Streamlit app.')
 
-show_button()
-st.title('Hello anjali')
-st.write('This is a simple Streamlit app.')
+name = st.text_input("Enter your name", "John Doe")
+password = st.text_input("Enter your password", type="password")
 
-if st.button('hello Streamlit app.'):
-    st.text('Hello, Streamlit!')
 
-name = st.text_input('Please enter your name:')
-if name:
-    st.write(f'Hello, {name}!')
+if st.button("Submit"):
+   if len(password) < 8:
+       st.warning("Password must be at least 8 characters long")
 
-file = st.file_uploader('Please upload a file:', type=['txt', 'csv'])
-if file:
-    st.write('Thanks for uploading a file!')
+
+   st.success("Password is valid")
