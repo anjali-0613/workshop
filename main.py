@@ -1,6 +1,5 @@
 import streamlit as st
 
-
 name = st.text_input("Enter your name", "John Doe")
 password = st.text_input("Enter your password", type="password")
 
