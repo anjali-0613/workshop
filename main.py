@@ -1,7 +1,9 @@
 import streamlit as st
 
+def show_button():
+    st.button('hello Streamlit app.')
 
-
+show_button()
 st.title('Hello anjali')
 st.write('This is a simple Streamlit app.')
 
